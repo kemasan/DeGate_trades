@@ -1,0 +1,55 @@
+2025-03-15 09:55:35,661 - WARNING - File data/token_metadata.csv not found. Returning empty token list.
+2025-03-15 09:55:35,666 - ERROR - No new token data found.
+2025-03-15 09:55:35,667 - INFO - Script Directory: /Users/kermen/Desktop/kema/Projects/DeGate_trades
+2025-03-15 09:55:35,667 - INFO - Looking for token metadata at: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-15 09:55:35,667 - INFO - File found: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-15 09:55:35,667 - INFO - Reading token metadata from: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-15 09:55:35,674 - INFO - Columns in the dataset: Index(['token', 'tokenid', 'symbol', '__row_index'], dtype='object')
+2025-03-15 09:55:35,674 - INFO - Total rows before filtering: 279
+2025-03-15 09:55:35,682 - INFO - File loaded successfully. First rows:
+                                        token  tokenid symbol  __row_index
+0  0xba100000625a3754423978a60c9317c58a424e3d      137    BAL            0
+1  0x5afe3855358e112b5647b952709e6165e1c1eeee      240   SAFE            1
+2  0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e       43    YFI            2
+3  0x4e15361fd6b4bb609fa63c81a2be19d873717870      112    FTM            3
+4  0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3      142    LEO            4
+2025-03-15 09:55:35,682 - INFO - Current token count: 279, Expected: 279
+2025-03-15 09:55:35,682 - INFO - Token count matches expected value. No new tokens detected.
+2025-03-15 12:30:02,761 - WARNING - File data/token_metadata.csv not found. Returning empty token list.
+2025-03-15 12:30:02,762 - ERROR - No new token data found.
+2025-03-15 12:30:02,762 - INFO - Script Directory: /Users/kermen/Desktop/kema/Projects/DeGate_trades
+2025-03-15 12:30:02,762 - INFO - Looking for token metadata at: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-15 12:30:02,763 - INFO - File found: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-15 12:30:02,763 - INFO - Reading token metadata from: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-15 12:30:02,769 - INFO - Columns in the dataset: Index(['token', 'tokenid', 'symbol', '__row_index'], dtype='object')
+2025-03-15 12:30:02,770 - INFO - Total rows before filtering: 279
+2025-03-15 12:30:02,778 - INFO - File loaded successfully. First rows:
+                                        token  tokenid symbol  __row_index
+0  0xba100000625a3754423978a60c9317c58a424e3d      137    BAL            0
+1  0x5afe3855358e112b5647b952709e6165e1c1eeee      240   SAFE            1
+2  0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e       43    YFI            2
+3  0x4e15361fd6b4bb609fa63c81a2be19d873717870      112    FTM            3
+4  0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3      142    LEO            4
+2025-03-15 12:30:02,778 - INFO - Current token count: 279, Expected: 279
+2025-03-15 12:30:02,778 - INFO - Token count matches expected value. No new tokens detected.
+2025-03-16 12:30:02,788 - WARNING - File data/token_metadata.csv not found. Returning empty token list.
+2025-03-16 12:30:02,789 - ERROR - No new token data found.
+2025-03-16 12:30:02,789 - INFO - Script Directory: /Users/kermen/Desktop/kema/Projects/DeGate_trades
+2025-03-16 12:30:02,789 - INFO - Looking for token metadata at: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-16 12:30:02,790 - INFO - File found: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-16 12:30:02,790 - INFO - Reading token metadata from: /Users/kermen/Desktop/kema/Projects/DeGate_trades/data/token_metadata.csv
+2025-03-16 12:30:02,798 - INFO - Columns in the dataset: Index(['token', 'tokenid', 'symbol', '__row_index'], dtype='object')
+2025-03-16 12:30:02,798 - INFO - Total rows before filtering: 279
+2025-03-16 12:30:02,807 - INFO - File loaded successfully. First rows:
+                                        token  tokenid symbol  __row_index
+0  0xba100000625a3754423978a60c9317c58a424e3d      137    BAL            0
+1  0x5afe3855358e112b5647b952709e6165e1c1eeee      240   SAFE            1
+2  0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e       43    YFI            2
+3  0x4e15361fd6b4bb609fa63c81a2be19d873717870      112    FTM            3
+4  0x2af5d2ad76741191d15dfe7bf6ac92d4bd912ca3      142    LEO            4
+2025-03-16 12:30:02,807 - INFO - Current token count: 279, Expected: 279
+2025-03-16 12:30:02,807 - INFO - Token count matches expected value. No new tokens detected.
+2025-03-17 12:30:02,888 - WARNING - File data/token_metadata.csv not found. Returning empty token list.
+2025-03-17 12:30:02,889 - ERROR - No new token data found.
+2025-03-18 12:30:02,239 - WARNING - File data/token_metadata.csv not found. Returning empty token list.
+2025-03-18 12:30:02,240 - ERROR - No new token data found.
