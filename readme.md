@@ -104,7 +104,7 @@ The script performs the following main tasks:
 7.  **Automate the Process with Cron Jobs:** To ensure daily updates, we use cron to run the scripts automatically. 
 
 Note: Automating process is not included in the notebook. 
-To schedule the scripts, you will need to convert your notebook to a `.py` file and then set up a cron job or similar scheduling tool to run the script daily.  
+To schedule the script to run, you will need to convert your notebook to a `.py` file and then set up a cron job or similar scheduling tool to run the script daily.  
 Open the crontab editor:
 ```
 crontab -e
