@@ -75,8 +75,9 @@ To securely manage your API keys for accessing Flipside and Dune Analytics, you 
 ## Working notebook
 Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data.
 
-The script performs the following main tasks:
-0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data.                    
+The script performs the following main tasks:           
+ 0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading 
+    data.                    
    Go to Dune Analytics -> Upload a dataset -> upload data programmatically via API (https://docs.dune.com/api-reference/tables/endpoint/create)       
    Create a new table named `your_table_name` with the following schema:
 
