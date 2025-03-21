@@ -76,7 +76,7 @@ To securely manage your API keys for accessing Flipside and Dune Analytics, you 
 Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data.
 
 The script performs the following main tasks:           
- 0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading 
+   0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading 
     data.                    
    Go to Dune Analytics -> Upload a dataset -> upload data programmatically via API (https://docs.dune.com/api-reference/tables/endpoint/create)       
    Create a new table named `your_table_name` with the following schema:
@@ -122,13 +122,13 @@ cat /path/to/logfile.log
 
 
 
-By completing this project, we will achieve:
-✅ A fully automated pipeline to fetch, process, and store DeGate trading data.
-✅ A clean dataset that can be easily analyzed in Dune Analytics.
-✅ A real-time trading dashboard displaying:
-    - Total trading volume per asset.
-    - Most traded pairs on DeGate.
-    - Historical price movements and trends.
+By completing this project, we will achieve:         
+✅ A fully automated pipeline to fetch, process, and store DeGate trading data.           
+✅ A clean dataset that can be easily analyzed in Dune Analytics.            
+✅ A real-time trading dashboard displaying:                 
+    - Total trading volume per asset.              
+    - Most traded pairs on DeGate.               
+    - Historical price movements and trends.                   
 
 
 **This project is still a work in progress, and I am actively seeking feedback and suggestions to improve it.**
