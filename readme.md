@@ -78,7 +78,7 @@ Before running the data-fetching scripts, you must create a table in Dune Analyt
 The script performs the following main tasks:
 0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data. Go to Dune Analytics -> Upload a dataset -> upload data programmatically via API (https://docs.dune.com/api-reference/tables/endpoint/create) 
     Create a new table named `your_table_name` with the following schema:
-    '''
+    ```
     schema = [
     {"name": "pair", "type": "varchar"},
     {"name": "date", "type": "timestamp", "nullable": False},
@@ -91,7 +91,7 @@ The script performs the following main tasks:
     {"name": "quote_volume", "type": "double", "nullable": False},
     {"name": "trades", "type": "double", "nullable": False}
     ]
-    '''
+    ```
 1.  **Fetch Token Metadata:** Retrieves a list of token registered on DeGate platform using the Flipside API.
 2.  **Identify Valid Trading Pairs:** Once we have the tokens, we need to determine which trading pairs exist on DeGate.
 3.  **Fetch Trading Data:** Fetches kline data for valid trading pairs from the DeGate API.
@@ -100,7 +100,23 @@ The script performs the following main tasks:
 6.  **Process New Tokens:** Detects and processes new tokens, updating metadata and fetching trading data accordingly.
 7. **Automate the Process with Cron Jobs:** To ensure daily updates, we use cron to run the scripts automatically. 
 
-Note: Automate process is not included in the notebook. You will need to convert the notebook to .py file and then set up a cron job or similar scheduling tool to run the script daily. 
+Note: Automating process is not included in the notebook. 
+To schedule the scripts, you will need to convert your notebook to a `.py` file and then set up a cron job or similar scheduling tool to run the script daily.  
+Open the crontab editor:
+```
+crontab -e
+
+```
+Add this line to schedule it to run every day at the required time with output/error logging:
+```
+0 0 * * * /usr/bin/python3 /path/to/your/script.py >> /path/to/logfile.log 2>&1
+```
+You can check logs anytime:
+```
+cat /path/to/logfile.log
+
+```
+
 
 
 By completing this project, we will achieve:
