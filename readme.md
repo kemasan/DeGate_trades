@@ -76,8 +76,10 @@ To securely manage your API keys for accessing Flipside and Dune Analytics, you 
 Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data.
 
 The script performs the following main tasks:
-0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data. Go to Dune Analytics -> Upload a dataset -> upload data programmatically via API (https://docs.dune.com/api-reference/tables/endpoint/create) 
-    Create a new table named `your_table_name` with the following schema:
+0. **Prepare the Table on Dune Analytics**Before running the data-fetching scripts, you must create a table in Dune Analytics to store the trading data.                    
+   Go to Dune Analytics -> Upload a dataset -> upload data programmatically via API (https://docs.dune.com/api-reference/tables/endpoint/create)       
+   Create a new table named `your_table_name` with the following schema:
+
     ```
     schema = [
     {"name": "pair", "type": "varchar"},
@@ -98,7 +100,7 @@ The script performs the following main tasks:
 4.  **Clean and Format Data:** Cleans and formats the fetched trading data for upload.
 5.  **Upload Data to Dune Analytics:** Uploads the cleaned data to Dune Analytics.
 6.  **Process New Tokens:** Detects and processes new tokens, updating metadata and fetching trading data accordingly.
-7. **Automate the Process with Cron Jobs:** To ensure daily updates, we use cron to run the scripts automatically. 
+7.  **Automate the Process with Cron Jobs:** To ensure daily updates, we use cron to run the scripts automatically. 
 
 Note: Automating process is not included in the notebook. 
 To schedule the scripts, you will need to convert your notebook to a `.py` file and then set up a cron job or similar scheduling tool to run the script daily.  
