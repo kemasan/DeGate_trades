@@ -1,0 +1,5 @@
+dotenv
+flipside
+numpy
+pandas
+requests

@@ -499,9 +499,6 @@ def upload_data_to_dune(file_path):
     return None
 
 
-# In[9]:
-
-
 # ==========================
 #  PROCESS NEW TOKENS
 # ==========================
@@ -510,12 +507,12 @@ def load_token_list(file_path):
     """ Load token list from a given CSV file. """
     try:
         df = pd.read_csv(file_path)
-        return set(df["symbol"])
+        return df
     except FileNotFoundError:
         logging.warning(f"File {file_path} not found. Returning empty token list.")
-        return set()
+        return pd.DataFrame(columns=["symbol", "token", "tokenId"])
     
-def update_token_metadata(new_tokens, existing_token_list, new_token_data, file_path):
+def update_token_metadata(new_tokens, existing_token_df, new_token_data, file_path):
     """ 
     Update token metadata with new tokens and save it to the CSV. 
     """
@@ -526,7 +523,7 @@ def update_token_metadata(new_tokens, existing_token_list, new_token_data, file_
         new_tokens_data = new_token_data[new_token_data["symbol"].isin(new_tokens)]
         
         # Append new data to old data and save
-        updated_data = pd.concat([existing_token_list, new_tokens_data], ignore_index=True)
+        updated_data = pd.concat([existing_token_df, new_tokens_data], ignore_index=True)
         updated_data.to_csv(file_path, index=False)
         
         return True
@@ -540,7 +537,8 @@ def process_new_tokens():
     """
     # Load existing tokens from token_metadata.csv in output_dir
     token_metadata_path = os.path.join(output_dir, "token_metadata.csv")
-    existing_token_list = load_token_list(token_metadata_path)
+    existing_token_df = load_token_list(token_metadata_path)
+    existing_token_symbols = set(existing_token_df["symbol"])   
 
     # Fetch the latest token list from Flipside API (simulated here)
     try:
@@ -551,13 +549,16 @@ def process_new_tokens():
         logging.error("No new token data found.")
         return
     
-    new_tokens = new_token_list - existing_token_list
+    new_tokens = new_token_list - existing_token_symbols
     # new_tokens.to_csv(f"new_tokens_{time.strftime('%Y%m%d_%H%M%S')}.csv", index=False) # pass file to get_valid_pairs()
     # If there are new tokens, update the metadata and fetch valid pairs
+    #Clean out NaN from new_tokens if present
+    new_tokens = {token for token in new_tokens if pd.notna(token)}
+   
     if new_tokens:
         logging.info(f"New tokens detected: {new_tokens}")
 
-        if update_token_metadata(new_tokens, existing_token_list, new_token_data, "token_metadata.csv"):
+        if update_token_metadata(new_tokens, existing_token_df, new_token_data, token_metadata_path):
             logging.info("Fetching valid pairs for new tokens...")
             
             # call the function to get the valid pairs
